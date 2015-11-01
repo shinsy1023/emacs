@@ -12,9 +12,9 @@ int main(){
     scanf("%d",&height[i]);
   }
   for (i=0;i<count;i++){
-    pascal=(long long**)malloc(sizeof(long long**)*height[i]);
+    pascal=(long long**)malloc(sizeof(long long**)*height[i]+1);
     for(j=0;j<height[i];j++){
-      pascal[j]=(long long*)malloc(sizeof(long long*)*j);
+      pascal[j]=(long long*)malloc(sizeof(long long*)*j+1);
       pascal[j][0]=1;
       pascal[j][j]=1;
       if(j!=0){
