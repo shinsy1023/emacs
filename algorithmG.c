@@ -20,6 +20,8 @@ int main(){
       for (k=0;k<i+1;k++){
 	if (list[i][j]<list[i][k]){
 	  big++;
+	}else if (list[i][j]==list[i][k]){
+	  big--;
 	}
       }
       if (big==half){
