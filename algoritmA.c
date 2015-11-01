@@ -17,7 +17,7 @@ int main(){
       printf("%d %d\n",jun,yun);
     }
     if (jun>yun){
-      printf("God junbeom bless you\n");
+      printf("God Junbeom bless you\n");
     }else if (yun>jun){
       printf("Cute Yunseong I love you\n");
     }else{
