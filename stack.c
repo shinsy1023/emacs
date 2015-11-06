@@ -6,8 +6,8 @@ typedef struct _node{
 	struct _node* next;
 }node;
 
-void push(node* top){
-
+node* push(node* top, what){
+	
 }
 
 void pop(node* top){
@@ -20,7 +20,8 @@ int main(int argc, char const *argv[]){
 	while (1){
 		scanf("%d", &what);
 		if (what==1){
-			push(top);
+			scanf("%d",what);
+			push(top, what);
 			printf("%d",top->num);
 		}else if(what==2){
 			pop(top);
