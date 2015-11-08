@@ -24,8 +24,8 @@ int main(){
     for (j=0; j<length[i]; j++){
       scanf("%d", &array[j]);
     }
+    qsort(array, length[i], sizeof(int),compare);
     for (j=0; j<length[i]-1;j++){
-      qsort(array, length[i], sizeof(int),compare);
       price[i]=array[j]+array[j+1]+price[i];
       array[j+1]=array[j+1]+array[j];
       array[j]=0;
