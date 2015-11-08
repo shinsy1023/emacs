@@ -15,7 +15,7 @@ int main(){
   int count, i, j;
   int length[500]={0};
   int array[500]={0};
-  int price=0;
+  int price[500]={0};
   scanf("%d", &count);
   for (i=0;i<count;i++){
     scanf("%d", &length[i]);
@@ -26,12 +26,13 @@ int main(){
     }
     for (j=0; j<length[i]-1;j++){
       qsort(array, length[i], sizeof(int),compare);
-      price=array[j]+array[j+1]+price;
+      price[i]=array[j]+array[j+1]+price[i];
       array[j+1]=array[j+1]+array[j];
       array[j]=0;
     }
-    printf("%d\n", price);
-    price=0;
+  }
+  for (i=0; i<count; i++){
+    printf("%d\n", price[i]);
   }
   return 0;
 }
