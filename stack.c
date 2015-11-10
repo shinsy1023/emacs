@@ -6,12 +6,16 @@ typedef struct _node{
 	struct _node* next;
 }node;
 
-node* push(node* top, what){
-	
+node* push(node* top, int what){
+	node* up=(node*)malloc(sizeof(node*));
+	up->num=what;
+	up->next=top;
+	return up;
 }
 
-void pop(node* top){
-
+node* pop(node* top){
+	printf("%d\n",top->num);
+	return top->next;
 }
 
 int main(int argc, char const *argv[]){
@@ -20,11 +24,10 @@ int main(int argc, char const *argv[]){
 	while (1){
 		scanf("%d", &what);
 		if (what==1){
-			scanf("%d",what);
-			push(top, what);
-			printf("%d",top->num);
+			scanf("%d",&what);
+			top=push(top, what);
 		}else if(what==2){
-			pop(top);
+			top=pop(top);
 		}
 	}
 	return 0;
