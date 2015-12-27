@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void qsort(
+
+int main(){
+  int count, i, j;
+  int length[500]=0;
+  int array[500]=0;
+  scanf("%d", &count);
+  for (i=0;i<count;i++){
+    scanf("%d", &length[i]);
+  }
+  for (i=0; i<count; i++){
+    for (j=0; j<length[i]; j++){
+      scanf("%d", array[j]);
+    }
+    void qsort(array, length[i], sizeof(int),compare
+    array=0;
+  }
+  return 0;
+}

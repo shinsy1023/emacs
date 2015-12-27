@@ -1,0 +1,7 @@
+#import <stdio.h>
+
+int main(){
+  int junbeom=0;
+  int yunseong=0;
+  scanf("%d",&junbeom);
+  printf("%d",junbeom);

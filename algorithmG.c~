@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+  int count, big;
+  int* list;
+  int i, j, k;
+  scanf("%d",&count);
+  for (i=0;i<count;i++){
+    big=0;
+    list=(int*)malloc(sizeof(int*)*(i+1));
+    for (j=0;j<i+1;j++){
+      scanf("%d",&list[j]);
+    }
+    for (j=0;j<i+1;j++){
+      for (k=0;k<i+1;k++){
+	if (list[j]<list[k]){
+	  big++;
+	}
+      }
+      if (big==int ((i+1)/2)){
+	printf("%d",list[j]);
+	big=0;
+	break;
+      }
+    }
+  }
+  return 0;
+}
