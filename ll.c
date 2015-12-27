@@ -22,19 +22,20 @@ node* add(node* head, int num){
 }
  
 void print(node* head){
+  printf("%d->", head->num);
   while(head->next!=NULL){
-    printf("%d->", head->num);
     head=head->next;
+    printf("%d->", head->num);
   }
+  printf("\n");
 }
 
 int main(){
-  node* head;
-  printf("%x\n", &head);
-  /* add(head, 1); */
-  /* add(head, 2); */
-  /* add(head, 3); */
-  /* add(head, 4); */
-  /* print(head) */;
+  node* head=(node*)malloc(sizeof(node));
+  add(head, 1);
+  add(head, 2);
+  add(head, 3);
+  add(head, 4);
+  print(head);
   return 0;
 }
