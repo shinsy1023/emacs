@@ -7,11 +7,6 @@ typedef struct _node{
 }node;
 
 node* add(node* head, int num){
-  if(head==NULL){
-    head=(node*)malloc(sizeof(node));
-    head->num=num;
-    return head;
-  }
   node* tmp=head;
   while (tmp->next!=NULL){
     tmp=tmp->next;
